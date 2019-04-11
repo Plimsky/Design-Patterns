@@ -9,7 +9,7 @@ public:
     {
         NEUTRAL,
         AGGRESSIVE,
-        AFFRAID
+        AFRAID
     };
 
     NpcBrain(const BehaviourType&);

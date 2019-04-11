@@ -1,7 +1,7 @@
 ﻿#include "NpcBrain.h"
 #include "NeutralBehaviour.h"
 #include "AggressiveBehaviour.h"
-#include "AffraidBehaviour.h"
+#include "AfraidBehaviour.h"
 
 NpcBrain::NpcBrain(const BehaviourType& p_type) : m_type{p_type}
 {
@@ -12,7 +12,7 @@ NpcBrain::NpcBrain(const BehaviourType& p_type) : m_type{p_type}
 void NpcBrain::GetAttacked() noexcept
 {
     std::cout << "Getting attacked : ";
-    SwitchBehaviour(BehaviourType::AFFRAID);
+    SwitchBehaviour(BehaviourType::AFRAID);
     m_behaviour->Dodge();
     std::cout << '\n';
 }
@@ -37,8 +37,8 @@ void NpcBrain::SwitchBehaviour(const BehaviourType& p_type) noexcept
         m_behaviour = std::make_unique<AggressiveBehaviour>();
         break;
 
-    case BehaviourType::AFFRAID:
-        m_behaviour = std::make_unique<AffraidBehaviour>();
+    case BehaviourType::AFRAID:
+        m_behaviour = std::make_unique<AfraidBehaviour>();
         break;
 
     default:
