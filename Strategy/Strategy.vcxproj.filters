@@ -18,7 +18,16 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="StandardBehaviour.cpp">
+    <ClCompile Include="NeutralBehaviour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AffraidBehaviour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NpcBrain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AggressiveBehaviour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,10 +38,16 @@
     <ClInclude Include="Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Interactible.h">
+    <ClInclude Include="NeutralBehaviour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="StandardBehaviour.h">
+    <ClInclude Include="AffraidBehaviour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NpcBrain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AggressiveBehaviour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

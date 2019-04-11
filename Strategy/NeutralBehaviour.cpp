@@ -1,6 +1,11 @@
 #include "NeutralBehaviour.h"
 #include <iostream>
 
+NeutralBehaviour::NeutralBehaviour()
+{
+    std::cout << "Is Neutral\n";
+}
+
 void NeutralBehaviour::Move()
 {
 	std::cout << "Neutral Move\n";

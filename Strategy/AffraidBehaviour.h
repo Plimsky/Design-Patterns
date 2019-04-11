@@ -1,11 +1,10 @@
-#pragma once
-
+﻿#pragma once
 #include "Behaviour.h"
 
-class NeutralBehaviour: public Behaviour
+class AffraidBehaviour : public Behaviour
 {
 public:
-    NeutralBehaviour();
+    AffraidBehaviour();
     void Move() override;
     void Attack(const Entity&) override;
     void Jump() override;
