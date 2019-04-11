@@ -17,7 +17,7 @@ Anyone who would be interested in learning design patterns, out of curiosity, fo
 
 ## Contents
 
-* [Strategy Pattern](Strategy/Strategy.md) : "Define a familly of algorithms, encapsulate each one, and make them interchangeable"
+* [Strategy Pattern](Strategy/Documentation/Strategy.md) : "Define a familly of algorithms, encapsulate each one, and make them interchangeable"
 
 ## Feedbacks
 Feel free to make feedback (through issues) if you feel there is a typo or error. I'm also open to pull requests :-)
