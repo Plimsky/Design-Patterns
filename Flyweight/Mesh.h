@@ -1,7 +1,3 @@
 ﻿#pragma once
 
-class Mesh
-{
-public:
-    
-};
+class Mesh {};

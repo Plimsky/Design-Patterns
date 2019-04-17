@@ -7,7 +7,7 @@ public:
     Tree(TreeModel& p_model) : m_model(p_model) {}
     Tree() = delete;
 
-	TreeModel& GetModel() const { return m_model; }
+    TreeModel& GetModel() const { return m_model; }
 
 private:
     TreeModel& m_model;

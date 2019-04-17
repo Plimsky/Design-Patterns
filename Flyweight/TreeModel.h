@@ -5,8 +5,11 @@
 
 class TreeModel : public Model
 {
+public:
+    TreeModel(const std::string& p_name) : Model{p_name} {}
+
 private:
     Mesh m_mesh;
     Texture m_bark;
-    Texture m_leaves;    
+    Texture m_leaves;
 };

@@ -6,9 +6,9 @@
 class Model
 {
 public:
-    explicit Model(std::string p_name) : m_name{std::move(p_name)} { std::cout << "Model(" << m_name << ");\n"; }
-	~Model() { std::cout << "~Model(" << m_name << ");\n"; }
+    explicit Model(const std::string& p_name) : m_name{std::move(p_name)} { std::cout << "Model(" << m_name << ");\n"; }
+    ~Model() { std::cout << "~Model(" << m_name << ");\n"; }
 
 private:
-	std::string m_name;
+    std::string m_name;
 };

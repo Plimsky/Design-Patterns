@@ -18,6 +18,7 @@ int main()
     std::cout << "There is " << factory.GetSize() << " models in the factory\n";
 
     assert(factory.GetSize() == 2);
+    assert(&oakTree.GetModel() != nullptr);
 
     return 0;
 }
