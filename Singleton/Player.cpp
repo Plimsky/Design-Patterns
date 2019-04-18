@@ -11,5 +11,5 @@ void Player::Die()
 void Player::Succeed()
 {
     std::cout << "Player Succeed\n";
-    GameSessionManager::GetInstance().ResetLevel();
+    GameSessionManager::GetInstance().LoadNextLevel();
 }
