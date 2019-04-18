@@ -6806,6 +6806,24 @@
 					]
 				}
 			]
+		},
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAFqMKwFdr4KwtI=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Observer",
+			"ownedElements": [
+				{
+					"_type": "UMLClassDiagram",
+					"_id": "AAAAAAFqMKwyUb4mhEU=",
+					"_parent": {
+						"$ref": "AAAAAAFqMKwFdr4KwtI="
+					},
+					"name": "Observer"
+				}
+			]
 		}
 	]
 }
