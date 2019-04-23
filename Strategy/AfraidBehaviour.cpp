@@ -13,20 +13,20 @@ void AfraidBehaviour::Move()
 
 void AfraidBehaviour::Attack(const Entity&)
 {
-    std::cout << "Affraid Move\n";
+    std::cout << "Affraid Attack\n";
 }
 
 void AfraidBehaviour::Jump()
 {
-    std::cout << "Affraid Move\n";
+    std::cout << "Affraid Jump\n";
 }
 
 void AfraidBehaviour::Crouch()
 {
-    std::cout << "Affraid Move\n";
+    std::cout << "Affraid Crouch\n";
 }
 
 void AfraidBehaviour::Dodge()
 {
-    std::cout << "Affraid Move\n";
+    std::cout << "Affraid Dodge\n";
 }
