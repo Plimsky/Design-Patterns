@@ -1,16 +1,16 @@
 ﻿#pragma once
-#include <vector>
+#include <list>
 #include <memory>
 #include "Observer.h"
 
 class Subject
 {
 public:
-    void AttachObserver(const Observer*);
-    void DetachObserver(const Observer*);
-
+    void AttachObserver(const std::shared_ptr<Observer>&);
+    void DetachObserver(const std::shared_ptr<Observer>&);
     void Notify(Entity&, const Event&);
+    void HowManyObservers() const;
 
 private:
-    std::vector<std::weak_ptr<Observer>> m_observers;
+    std::list<std::weak_ptr<Observer>> m_observers;
 };
