@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include <memory>
+
 #include "Behaviour.h"
 
 class NpcBrain
@@ -15,9 +16,9 @@ public:
     NpcBrain(const BehaviourType&);
 
     void GetAttacked() noexcept;
-    void Attack(const Entity&) noexcept;
+    void Attack(const Entity& p_target) noexcept;
 
-    void SwitchBehaviour(const BehaviourType&) noexcept;
+    void SwitchBehaviour(const BehaviourType& p_type) noexcept;
 
 private:
     BehaviourType m_type;

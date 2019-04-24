@@ -1,12 +1,12 @@
 ﻿#include "Subject.h"
 #include <iostream>
 
-void Subject::AttachObserver(const std::shared_ptr<Observer>& p_observer)
+void Subject::AttachObserver(const std::shared_ptr<IObserver>& p_observer)
 {
     m_observers.emplace_back(p_observer);
 }
 
-void Subject::DetachObserver(const std::shared_ptr<Observer>& p_observer)
+void Subject::DetachObserver(const std::shared_ptr<IObserver>& p_observer)
 {
     m_observers.remove_if([p_observer](auto p_itemObserver)
     {

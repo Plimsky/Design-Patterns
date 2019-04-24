@@ -1,4 +1,5 @@
 ﻿#include "AfraidBehaviour.h"
+
 #include <iostream>
 
 AfraidBehaviour::AfraidBehaviour()

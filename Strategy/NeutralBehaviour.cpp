@@ -1,4 +1,5 @@
 #include "NeutralBehaviour.h"
+
 #include <iostream>
 
 NeutralBehaviour::NeutralBehaviour()

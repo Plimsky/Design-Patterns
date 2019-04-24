@@ -1,7 +1,8 @@
 ﻿#pragma once
-#include "Model.h"
 #include <memory>
 #include <unordered_map>
+
+#include "Model.h"
 
 class FactoryModel
 {
@@ -17,7 +18,7 @@ public:
         return reinterpret_cast<T&>(*m_models[p_key]);
     }
 
-    size_t GetSize() const;
+    uint32_t GetSize() const;
 
 private:
     std::unordered_map<std::string, std::unique_ptr<Model>> m_models;

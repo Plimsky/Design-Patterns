@@ -1,4 +1,7 @@
 ﻿#include "NpcBrain.h"
+
+#include <iostream>
+
 #include "NeutralBehaviour.h"
 #include "AggressiveBehaviour.h"
 #include "AfraidBehaviour.h"
@@ -44,4 +47,6 @@ void NpcBrain::SwitchBehaviour(const BehaviourType& p_type) noexcept
     default:
         break;
     }
+
+	m_type = p_type;
 }

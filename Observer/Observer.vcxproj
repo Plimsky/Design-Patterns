@@ -126,8 +126,7 @@
   <ItemGroup>
     <ClInclude Include="AchievementObserver.h" />
     <ClInclude Include="Entity.h" />
-    <ClInclude Include="Monster.h" />
-    <ClInclude Include="Observer.h" />
+    <ClInclude Include="IObserver.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Subject.h" />
   </ItemGroup>

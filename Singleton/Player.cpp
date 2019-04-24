@@ -1,6 +1,8 @@
 ﻿#include "Player.h"
-#include "GameSessionManager.h"
+
 #include <iostream>
+
+#include "GameSessionManager.h"
 
 void Player::Die()
 {

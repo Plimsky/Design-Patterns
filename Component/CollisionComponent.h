@@ -5,6 +5,6 @@ class CollisionComponent : public IComponent
 {
 public:
     CollisionComponent();
-    ~CollisionComponent();
+    virtual ~CollisionComponent();
     void Update() override;
 };

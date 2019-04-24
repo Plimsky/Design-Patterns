@@ -1,6 +1,7 @@
+#include <iostream>
+
 #include "GameSessionManager.h"
 #include "Player.h"
-#include <iostream>
 
 int main()
 {

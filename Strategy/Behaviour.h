@@ -1,6 +1,6 @@
 #pragma once
-
 #include "Entity.h"
+
 class Behaviour
 {
 public:

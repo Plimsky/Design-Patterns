@@ -1,6 +1,6 @@
-﻿#include <iostream>
+﻿#include "InventoryComponent.h"
 
-#include "InventoryComponent.h"
+#include <iostream>
 
 InventoryComponent::InventoryComponent()
 {

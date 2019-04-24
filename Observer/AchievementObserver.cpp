@@ -1,6 +1,8 @@
 ﻿#include "AchievementObserver.h"
-#include "Player.h"
+
 #include <iostream>
+
+#include "Player.h"
 
 void AchievementObserver::OnNotify(Entity& p_entity, const Event& p_event)
 {
