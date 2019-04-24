@@ -127,7 +127,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Events\AttackEvent.cpp" />
+    <ClCompile Include="States\AttackState.cpp" />
+    <ClCompile Include="Events\IdleEvent.cpp" />
+    <ClCompile Include="States\IdleState.cpp" />
+    <ClCompile Include="Events\JumpEvent.cpp" />
+    <ClCompile Include="States\JumpState.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="States\State.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Events\AttackEvent.h" />
+    <ClInclude Include="States\AttackState.h" />
+    <ClInclude Include="Events\IdleEvent.h" />
+    <ClInclude Include="States\IdleState.h" />
+    <ClInclude Include="Events\JumpEvent.h" />
+    <ClInclude Include="States\JumpState.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="States\State.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
