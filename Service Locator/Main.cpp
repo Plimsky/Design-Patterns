@@ -1,24 +1,38 @@
+#include <iostream>
+
 #include "Locator.h"
 #include "ConsoleAudio.h"
-#include <iostream>
 
 int main()
 {
-    const auto consoleAudio = std::make_shared<ConsoleAudio>();
-    Locator::Provide("ConsoleAudio", consoleAudio);
-    auto audioConsoleService = Locator::GetService("ConsoleAudio");
-	auto inexistantService = Locator::GetService("xService");
+    Locator::Provide("ConsoleAudio", std::make_shared<ConsoleAudio>());
 
-    if (audioConsoleService.has_value())
+    const auto optionalAudioConsoleService  = Locator::GetService("ConsoleAudio");
+    const auto sharedPtrAudioConsoleService = Locator::GetService<ConsoleAudio>("ConsoleAudio");
+
+    const auto optionalInexistantService  = Locator::GetService("xService");
+    const auto sharedPtrInexistantService = Locator::GetService<ConsoleAudio>("xService");
+
+    if (optionalAudioConsoleService.has_value())
     {
-        auto consoleSharedPtr = std::static_pointer_cast<ConsoleAudio>(audioConsoleService.value());
+        auto consoleSharedPtr = std::static_pointer_cast<ConsoleAudio>(optionalAudioConsoleService.value());
         consoleSharedPtr->PlaySound(1);
         consoleSharedPtr->StopSound(1);
         consoleSharedPtr->StopAllSounds();
     }
 
-	if (!inexistantService.has_value())
-		std::cout << "No service\n";
+    if (sharedPtrAudioConsoleService != nullptr)
+    {
+        sharedPtrAudioConsoleService->PlaySound(1);
+        sharedPtrAudioConsoleService->StopSound(1);
+        sharedPtrAudioConsoleService->StopAllSounds();
+    }
+
+    if (!optionalInexistantService.has_value())
+        std::cout << "No service\n";
+
+    if (sharedPtrInexistantService == nullptr)
+        std::cout << "No service\n";
 
     return 0;
 }
