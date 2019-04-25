@@ -119,12 +119,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Actor.cpp" />
     <ClCompile Include="Commands\AttackCommand.cpp" />
     <ClCompile Include="Commands\JumpCommand.cpp" />
     <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Actor.h" />
     <ClInclude Include="Commands\AttackCommand.h" />
     <ClInclude Include="Commands\Command.h" />
     <ClInclude Include="Commands\JumpCommand.h" />

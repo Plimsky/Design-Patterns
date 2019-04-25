@@ -2,12 +2,12 @@
 
 #include <iostream>
 
-void JumpCommand::Execute()
+void JumpCommand::Execute(const Actor& p_actor)
 {
-    Jump();
+    p_actor.Jump();
 }
 
-void JumpCommand::Jump() const
+void JumpCommand::Undo()
 {
-    std::cout << "Jumping\n";
+    std::cout << "Undo Jumping\n";
 }

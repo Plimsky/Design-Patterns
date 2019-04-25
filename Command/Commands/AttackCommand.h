@@ -4,6 +4,6 @@
 class AttackCommand : public Command
 {
 public:
-    void Execute() override;
-    void Attack() const;
+    void Execute(const Actor& p_actor) override;
+    void Undo() override;
 };

@@ -4,6 +4,6 @@
 class JumpCommand : public Command
 {
 public:
-    void Execute() override;
-    void Jump() const;
+    void Execute(const Actor& p_actor) override;
+    void Undo() override;
 };

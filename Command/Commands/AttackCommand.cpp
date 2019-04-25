@@ -2,12 +2,12 @@
 
 #include <iostream>
 
-void AttackCommand::Execute()
+void AttackCommand::Execute(const Actor& p_actor)
 {
-    Attack();
+    p_actor.Attack();
 }
 
-void AttackCommand::Attack() const
+void AttackCommand::Undo()
 {
-    std::cout << "Attacking\n";
+    std::cout << "Undo Attacking\n";
 }

@@ -1,4 +1,5 @@
 ﻿#include "InputHandler.h"
+#include <iostream>
 
 InputHandler::InputHandler()
 {
@@ -8,13 +9,28 @@ InputHandler::InputHandler()
     m_keyboardMap['b']  = ControllerInput::B_BUTTON;
 }
 
-void InputHandler::Handle()
+void InputHandler::Handle(const Actor& p_actor)
 {
     for (auto& [typeInput, command] : m_commandMap)
     {
-        if (IsPressed(typeInput))
-            command->Execute();
+        if (IsPressed(typeInput)) 
+		{
+            m_stackOfCommands.push(command);
+            command->Execute(p_actor);
+		}
     }
+}
+
+void InputHandler::UndoAllCommands()
+{
+    while (!m_stackOfCommands.empty())
+	{
+        auto commandPtr = m_stackOfCommands.top();
+        commandPtr.lock()->Undo();
+        m_stackOfCommands.pop();
+	}
+
+    std::cout << "Command stack size : " << m_stackOfCommands.size() << '\n';
 }
 
 bool InputHandler::IsPressed(const ControllerInput p_typeInput) const
