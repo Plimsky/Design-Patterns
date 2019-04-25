@@ -1,16 +1,21 @@
 ﻿#include "IdleEvent.h"
 
+#include <iostream>
+
 StatePlayer IdleEvent::operator()(const IdleState&) const
 {
+	std::cout << "From Idle to Idle\n";
     return IdleState{};
 }
 
 StatePlayer IdleEvent::operator()(const JumpState&) const
 {
-    return JumpState{};
+	std::cout << "From Jump to Idle\n";
+    return IdleState{};
 }
 
 StatePlayer IdleEvent::operator()(const AttackState&) const
 {
-    return AttackState{};
+	std::cout << "From Attack to Idle\n";
+    return IdleState{};
 }

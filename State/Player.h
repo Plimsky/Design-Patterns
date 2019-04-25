@@ -18,6 +18,9 @@ public:
     void DoJump();
     bool IsJumping();
 
+    void DoAttack();
+    bool IsAttacking();
+
 private:
      StatePlayer m_state;
 };

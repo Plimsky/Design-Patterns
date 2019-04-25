@@ -7,7 +7,7 @@
 class IdleEvent
 {
 public:
-    std::variant<IdleState, JumpState, AttackState> operator()(const IdleState&) const;
-    std::variant<IdleState, JumpState, AttackState> operator()(const JumpState&) const;
-    std::variant<IdleState, JumpState, AttackState> operator()(const AttackState&) const;
+	StatePlayer operator()(const IdleState&) const;
+	StatePlayer operator()(const JumpState&) const;
+	StatePlayer operator()(const AttackState&) const;
 };
